@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-bulma-quickstart",
-  "description": "A Project to bootstrap your next Gatsby + Bulma site.",
+  "name": "jamstack-recipes",
+  "description": "Easy to use templates for JAMstack projects.",
   "version": "1.10.2",
-  "author": "Aman Mittal <amandeepmittal@live.com>",
+  "author": "CodeBytes <tom@codebytes.io>",
   "dependencies": {
     "bulma": "^0.8.2",
     "gatsby": "^2.20.18",
@@ -14,6 +14,7 @@
     "gatsby-plugin-sass": "^2.2.1",
     "gatsby-plugin-sharp": "^2.5.4",
     "gatsby-plugin-sitemap": "^2.3.1",
+    "gatsby-plugin-typescript": "^2.4.2",
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-transformer-sharp": "^2.4.4",
     "node-sass": "^4.13.1",
