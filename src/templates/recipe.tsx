@@ -2,23 +2,21 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import IngredientsList from "../components/ingredient-list";
-import { hydrateIngredients } from "../types/ingredients";
+import { hydrateIngredients, IngredientName } from "../types/ingredients";
 
-// interface PostProps {
-//   data: {
-//     sitePage: {
-//       context: {
-//         title: string;
-//         category: string;
-//         date: Date;
-//         videoId: string;
-//       };
-//     };
-//   };
-// }
+interface RecipeProps {
+  data: {
+    sitePage: {
+      context: {
+        title: string;
+        date: Date;
+        ingredients: IngredientName[];
+      };
+    };
+  };
+}
 
-const Recipe = ({ data }): JSX.Element => {
-  console.log("data", data);
+const Recipe = ({ data }: RecipeProps): JSX.Element => {
   return (
     <Layout>
       <p>{data.sitePage.context.title}</p>
