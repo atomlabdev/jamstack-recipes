@@ -17,10 +17,11 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `markdown-pages`,
+        path: `${__dirname}/content/recipes`,
       },
     },
+    "gatsby-transformer-remark",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     {
@@ -46,6 +47,17 @@ module.exports = {
       },
     },
     { resolve: `gatsby-plugin-typescript` },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Nunito`,
+            variants: [`300`, `400`, `700`],
+          },
+        ],
+      },
+    },
     `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
