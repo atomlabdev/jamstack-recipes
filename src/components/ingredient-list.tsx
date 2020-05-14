@@ -8,11 +8,14 @@ interface IngredientListProps {
 
 const IngredientsList = ({ ingredients }: IngredientListProps): JSX.Element => {
   return (
-    <div>
-      {ingredients.map((ingredient) => (
-        <IngredientListItem ingredient={ingredient} />
-      ))}
-    </div>
+    <>
+      <h3>Ingredients</h3>
+      <ul className="ingredient-list">
+        {ingredients.map((ingredient) => (
+          <IngredientListItem ingredient={ingredient} />
+        ))}
+      </ul>
+    </>
   );
 };
 

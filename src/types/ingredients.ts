@@ -58,7 +58,7 @@ export const ingredients: Ingredient[] = [
   },
 ];
 
-export const hydrateIngredients = (keywords: string[]): Ingredient[] =>
+export const hydrateIngredients = (keywords: IngredientName[]): Ingredient[] =>
   ingredients.filter(
     (ingredient: Ingredient) => keywords.indexOf(ingredient.name) > -1
   );

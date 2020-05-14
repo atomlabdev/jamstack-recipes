@@ -10,9 +10,7 @@ const Layout = ({ children }) => (
   <div>
     <Helmet />
     <Header />
-    <section className="section" style={{ backgroundColor: "#F7FAFC" }}>
-      <div className="container">{children}</div>
-    </section>
+    {children}
     <Footer />
   </div>
 );

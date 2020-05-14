@@ -7,9 +7,11 @@ interface IngredientProps {
 
 const IngredientListItem = ({ ingredient }: IngredientProps) => {
   return (
-    <p>
-      {ingredient.name} - {ingredient.type}
-    </p>
+    <li className="ingredient-list-item">
+      <span className="has-bold-text">{ingredient.name}</span>
+      <br />
+      <span>{ingredient.type}</span>
+    </li>
   );
 };
 

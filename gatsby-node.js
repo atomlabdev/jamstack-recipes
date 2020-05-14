@@ -9,6 +9,8 @@ exports.createPages = async function({ actions, graphql }) {
               slug
               date
               ingredients
+              description
+              images
             }
           }
         }
@@ -17,7 +19,14 @@ exports.createPages = async function({ actions, graphql }) {
   `);
 
   data.allMarkdownRemark.edges.forEach((edge) => {
-    const { title, slug, date, ingredients } = edge.node.frontmatter;
+    const {
+      title,
+      slug,
+      date,
+      ingredients,
+      description,
+      images,
+    } = edge.node.frontmatter;
 
     actions.createPage({
       path: slug,
@@ -28,6 +37,8 @@ exports.createPages = async function({ actions, graphql }) {
         slug,
         date,
         ingredients,
+        description,
+        images,
       },
     });
   });

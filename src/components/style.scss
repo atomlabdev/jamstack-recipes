@@ -5,7 +5,25 @@
 @import "~bulma/bulma.sass";
 
 body {
+  background-color: hsl(18, 77%, 98%);
+  height: 100vh;
   font-family: Nunito, helvetica, arial, sans-serif;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.site-title {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: hsl(18, 77%, 10%);
 }
 
 .gradientBg {
@@ -19,11 +37,6 @@ body {
   align-items: center;
 }
 
-.logo {
-  color: #fff;
-  font-size: 32px;
-}
-
 .footer {
   display: flex;
   padding: 1.5rem 1.5rem;
@@ -35,4 +48,34 @@ body {
   a:hover {
     color: $secondary-color;
   }
+}
+
+.primary-bg {
+  background-color: hsl(179, 43%, 57%);
+}
+
+.cta {
+  background-color: hsl(358, 100%, 86%);
+  border: none;
+  color: hsl(358, 100%, 20%);
+  transition: 0.3s;
+}
+
+.cta:hover {
+  background-color: hsl(358, 100%, 80%);
+}
+
+.has-border-radius {
+  border-radius: 12px;
+}
+
+.ingredient-list {
+  list-style: none;
+  border-top: 1px solid hsla(0, 0%, 13%, 0.1);
+}
+
+.ingredient-list-item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid hsla(0, 0%, 13%, 0.1);
 }

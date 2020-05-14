@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import IngredientsList from "../components/ingredient-list";
 import { hydrateIngredients, IngredientName } from "../types/ingredients";
+import Carousel from "../components/carousel";
 
 interface RecipeProps {
   data: {
@@ -11,6 +12,7 @@ interface RecipeProps {
         title: string;
         date: Date;
         ingredients: IngredientName[];
+        images: string[];
       };
     };
   };
@@ -19,10 +21,13 @@ interface RecipeProps {
 const Recipe = ({ data }: RecipeProps): JSX.Element => {
   return (
     <Layout>
-      <p>{data.sitePage.context.title}</p>
-      <IngredientsList
-        ingredients={hydrateIngredients(data.sitePage.context.ingredients)}
-      />
+      <Carousel images={data.sitePage.context.images} />
+      <div style={{ padding: 20 }}>
+        <h1>{data.sitePage.context.title}</h1>
+        <IngredientsList
+          ingredients={hydrateIngredients(data.sitePage.context.ingredients)}
+        />
+      </div>
     </Layout>
   );
 };
@@ -34,6 +39,7 @@ export const postQuery = graphql`
         title
         date
         ingredients
+        images
       }
     }
   }

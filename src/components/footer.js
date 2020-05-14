@@ -5,15 +5,11 @@ import "./style.scss";
 import Emoji from "./emoji";
 
 const Footer = () => (
-  <footer className="footer center has-background-dark has-text-white">
-    <div className="content has-text-centered">
+  <footer className="footer">
+    <div className="content">
       <p className="is-size-5">
         &copy; 2020 JAMstack Recipes. A{" "}
-        <a
-          className="has-text-white"
-          target="_blank"
-          href="https://codebytes.io"
-        >
+        <a target="_blank" href="https://codebytes.io">
           CodeBytes
         </a>{" "}
         project.

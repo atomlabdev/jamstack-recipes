@@ -1,22 +1,37 @@
 import React from "react";
 import { Link } from "gatsby";
+import { FiArrowRightCircle } from "react-icons/fi";
 
-const RecipeCard = () => {
+interface RecipeCardProps {
+  title: string;
+  path: string;
+  description: string;
+  image: string;
+}
+
+const RecipeCard = ({ title, path, description, image }: RecipeCardProps) => {
   return (
-    <Link to="/">
-      <div className="card">
-        <div style={{ padding: 20 }}>
-          <p className="title is-4" style={{ marginBottom: 5 }}>
-            Tick
-          </p>
-          <p className="subtitle is-6 is-marginless">A todo list app</p>
+    <Link to={path}>
+      <div className="card has-border-radius">
+        <div
+          style={{
+            padding: 20,
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <div>
+            <p className="title is-6" style={{ marginBottom: 5 }}>
+              {title}
+            </p>
+            <p className="subtitle is-6 is-marginless">{description}</p>
+          </div>
+          <FiArrowRightCircle size={24} />
         </div>
         <div className="card-image">
           <figure className="image is-4by3">
-            <img
-              src="https://cdn.dribbble.com/users/2179951/screenshots/9736536/media/f8d2a4f7f1baf975fa7515642ac55ead.png"
-              alt="Placeholder image"
-            />
+            <img src={image} alt={title} />
           </figure>
         </div>
       </div>
